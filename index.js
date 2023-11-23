@@ -1,8 +1,11 @@
 var keys_num = 28;
 var guess_num = 1;
 var curr_letter = 1;
-var word_to_guess = "POKER";
+var word_to_guess = "QUEEN";
 var curr_guess = ""
+
+var addr = "./pics/" + word_to_guess + "" + guess_num + ".png";
+document.getElementById("guess-pic").setAttribute("src", addr);
 
 
 // add listeners
@@ -31,7 +34,7 @@ function handleKey() {
             guess_num++;
             curr_letter = 1;
             curr_guess = "";
-            var addr = "./pics/" + word_to_guess + "" + guess_num + ".png";
+            addr = "./pics/" + word_to_guess + "" + guess_num + ".png";
             document.getElementById("guess-pic").setAttribute("src", addr);
         }
         else {
